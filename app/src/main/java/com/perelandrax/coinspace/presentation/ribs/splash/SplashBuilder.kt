@@ -51,6 +51,8 @@ class SplashBuilder(dependency: ParentComponent) :
     return component.splashRouter()
   }
 
+
+  //test
   override fun inflateView(inflater: LayoutInflater, parentViewGroup: ViewGroup): SplashView? {
     return inflater.inflate(R.layout.layout_splash_rib, parentViewGroup, false) as SplashView
   }
