@@ -3,9 +3,7 @@ package com.perelandrax.coincraft.ribs.root
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.perelandrax.coincraft.R
-import com.perelandrax.coincraft.ribs.NaderMain.NaderMainBuilder
 import com.perelandrax.coincraft.ribs.main.MainBuilder
-import com.perelandrax.coincraft.ribs.mainBottomTab.MainBottomTabBuilder
 import com.uber.rib.core.InteractorBaseComponent
 import com.uber.rib.core.ViewBuilder
 import dagger.Binds
@@ -63,7 +61,7 @@ class RootBuilder(dependency: ParentComponent) :
         view: RootView,
         interactor: RootInteractor
       ): RootRouter {
-        return RootRouter(view, interactor, component, MainBottomTabBuilder(component))
+        return RootRouter(view, interactor, component, MainBuilder(component))
       }
 
       // TODO: Create provider methods for dependencies created by this Rib. These should be static.
@@ -75,7 +73,7 @@ class RootBuilder(dependency: ParentComponent) :
   interface Component :
     InteractorBaseComponent<RootInteractor>,
     BuilderComponent,
-    MainBottomTabBuilder.ParentComponent {
+    MainBuilder.ParentComponent {
 
     @dagger.Component.Builder
     interface Builder {
