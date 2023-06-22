@@ -4,6 +4,8 @@ import com.perelandrax.coincraft.ribs.NaderMain.NaderMainBuilder
 import com.perelandrax.coincraft.ribs.NaderMain.NaderMainRouter
 import com.perelandrax.coincraft.ribs.main.MainBuilder
 import com.perelandrax.coincraft.ribs.main.MainRouter
+import com.perelandrax.coincraft.ribs.mainBottomTab.MainBottomTabBuilder
+import com.perelandrax.coincraft.ribs.mainBottomTab.MainBottomTabRouter
 import com.uber.rib.core.ViewRouter
 
 /**
@@ -15,10 +17,10 @@ class RootRouter(
   view: RootView,
   interactor: RootInteractor,
   component: RootBuilder.Component,
-  private val mainBuilder: NaderMainBuilder
+  private val mainBuilder: MainBottomTabBuilder
 ) : ViewRouter<RootView, RootInteractor, RootBuilder.Component>(view, interactor, component) {
 
-  private var mainRouter: NaderMainRouter? = null
+  private var mainRouter: MainBottomTabRouter? = null
 
   fun attachMain() {
     mainRouter = mainBuilder.build(view)
