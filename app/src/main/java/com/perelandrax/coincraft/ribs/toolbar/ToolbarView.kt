@@ -4,7 +4,7 @@ import android.content.Context
 import android.util.AttributeSet
 import androidx.appcompat.widget.Toolbar
 import com.teamdecano.cryptocoin.common.screen_stack.Services
-import kotlinx.android.synthetic.main.toolbar_rib.view.toolbar
+import kotlinx.android.synthetic.main.toolbar_rib.view.naderToolbar
 import kotlinx.android.synthetic.main.toolbar_rib.view.toolbar_title
 
 /**
@@ -20,7 +20,7 @@ class ToolbarView @JvmOverloads constructor(
   }
 
   private fun setupToolbar() {
-    Services.setSupportActionBar(context, toolbar)
+    Services.setSupportActionBar(context, naderToolbar)
   }
 
   override fun updateTitle(title: String) {

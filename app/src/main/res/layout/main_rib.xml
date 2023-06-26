@@ -6,7 +6,7 @@
   android:layout_height="match_parent">
 
   <FrameLayout
-    android:id="@+id/toolbar"
+    android:id="@+id/naderToolbar"
     android:layout_width="match_parent"
     android:layout_height="?attr/actionBarSize"
     android:background="#8800ff00"
@@ -31,6 +31,6 @@
     app:layout_constraintBottom_toTopOf="@+id/navigation"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+    app:layout_constraintTop_toBottomOf="@+id/naderToolbar"/>
 
 </com.perelandrax.coincraft.ribs.main.MainView>

@@ -7,9 +7,8 @@ import com.perelandrax.coincraft.ribs.navitype.NaviTypeRouter
 import com.perelandrax.coincraft.ribs.toolbar.ToolbarBuilder
 import com.perelandrax.coincraft.ribs.toolbar.ToolbarRouter
 import com.uber.rib.core.ViewRouter
-import kotlinx.android.synthetic.main.main_rib.view.content
 import kotlinx.android.synthetic.main.main_rib.view.navigation
-import kotlinx.android.synthetic.main.main_rib.view.toolbar
+import kotlinx.android.synthetic.main.main_rib.view.naderToolbar
 
 /**
  * Adds and removes children of {@link MainBuilder.MainScope}.
@@ -31,7 +30,7 @@ class MainRouter(
 
   fun attachToolbar() {
     attachChild(toolbarRouter)
-    view.toolbar.addView(toolbarRouter.view)
+    view.naderToolbar.addView(toolbarRouter.view)
   }
 
   fun attachNavigation() {
